@@ -56,7 +56,3 @@ def create_comment(request, blog_id):
         finished_form.post = get_object_or_404(Blog, pk=blog_id)
         finished_form.save()
     return redirect('detail', blog_id)
-
-def logout(request):
-    auth.logout(request)
-    return redirect('home')
